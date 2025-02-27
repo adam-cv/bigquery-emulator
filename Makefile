@@ -12,3 +12,7 @@ emulator/build:
 
 docker/build:
 	docker build -t bigquery-emulator . --build-arg VERSION=${VERSION}
+
+update-dependencies:
+	go get -u ./...
+	go mod tidy
